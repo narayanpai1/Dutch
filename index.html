@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f2e8" />
+    <meta name="description" content="Learn everyday Dutch with friendly, detailed flashcards." />
+    <title>Praat — Dutch that sticks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Praat home">
+        <span class="brand-mark">P</span>
+        <span>praat<span class="brand-dot">.</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <button class="nav-link active" data-view="study">Study</button>
+        <button class="nav-link" data-view="library">Library</button>
+      </nav>
+      <button class="sound-toggle" id="sound-toggle" aria-pressed="true" title="Toggle pronunciation">
+        <span aria-hidden="true">◖))</span><span class="sound-label">Sound on</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="study-view" id="study-view">
+        <div class="hero-copy">
+          <p class="eyebrow">EVERYDAY DUTCH · <span id="card-count">01 CARD</span></p>
+          <h1>Learn what people<br /><em>actually say.</em></h1>
+          <p class="intro">Useful phrases, thoughtful explanations, and just enough repetition to make them stick.</p>
+        </div>
+
+        <div class="study-grid">
+          <aside class="progress-panel" aria-label="Study progress">
+            <div>
+              <span class="label">TODAY'S PROGRESS</span>
+              <div class="progress-number"><strong id="progress-number">0</strong><span id="progress-total">/ 1</span></div>
+              <div class="progress-track"><span id="progress-bar"></span></div>
+              <p id="progress-message">One phrase at a time.</p>
+            </div>
+            <div class="streak">
+              <span class="streak-icon">✦</span>
+              <div><strong id="known-count">0</strong><span>learned</span></div>
+            </div>
+          </aside>
+
+          <div class="card-stage">
+            <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard. Press to reveal answer.">
+              <article class="card-face card-front">
+                <div class="card-topline"><span class="category" id="front-category">AT THE SHOP</span><span class="card-index" id="card-index">01 / 01</span></div>
+                <div class="phrase-wrap">
+                  <p class="prompt-label">What does this mean?</p>
+                  <h2 id="front-word">Anders nog iets?</h2>
+                  <button class="speak-button" id="speak-button" aria-label="Hear Dutch pronunciation">▶ <span>listen</span></button>
+                </div>
+                <p class="flip-hint">Tap the card to reveal <span>↗</span></p>
+              </article>
+              <article class="card-face card-back">
+                <div class="card-topline"><span class="category" id="back-category">AT THE SHOP</span><span class="card-index">ANSWER</span></div>
+                <div class="answer-scroll" id="answer-content"></div>
+                <p class="flip-hint">Tap to see the phrase <span>↙</span></p>
+              </article>
+            </div>
+            <div class="actions" id="actions" hidden>
+              <button class="action-button again" data-rating="again"><span>↺</span> Again</button>
+              <button class="action-button got-it" data-rating="known"><span>✓</span> Got it</button>
+            </div>
+            <p class="keyboard-help">Space to flip <span>·</span> 1 again <span>·</span> 2 got it</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="library-view" id="library-view" hidden>
+        <div class="library-heading">
+          <div><p class="eyebrow">YOUR PHRASEBOOK</p><h1>Every card,<br /><em>close at hand.</em></h1></div>
+          <label class="search"><span>⌕</span><input id="search-input" type="search" placeholder="Search Dutch or English…" /></label>
+        </div>
+        <div class="filter-row">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="learning">Learning</button>
+          <button class="filter" data-filter="known">Learned</button>
+          <span id="result-count"></span>
+        </div>
+        <div class="library-grid" id="library-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>No phrases match that search.</p>
+      </section>
+    </main>
+
+    <footer><span>Made for curious minds</span><span>LEER · LUISTER · PRAAT</span></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
