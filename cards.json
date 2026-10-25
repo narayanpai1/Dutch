@@ -40,5 +40,12 @@
     "english": "How is it going with it?",
     "category": "Conversation",
     "markdown": "## How is it going?\n\nAsk this when you are following up on something already discussed: a project, recovery, course, or new job.\n\n### Word by word\n\n- **hoe** = how\n- **gaat het** = is it going\n- **ermee** = with it\n\n### Compare\n\n- **Hoe gaat het?** = How are you? / How's it going?\n- **Hoe gaat het ermee?** = How is that particular thing going?\n\n💡 **ermee** points back to a thing or situation both speakers already know about."
+  },
+  {
+    "id": "ik-heb-er-twee",
+    "dutch": "Ik heb er twee.",
+    "english": "I have two (of them).",
+    "category": "Grammar",
+    "markdown": "## I have two (of them).\n\nUse **er** when a previously mentioned countable noun is left out. It refers back to the noun, much like “of them” in English.\n\n### The pattern\n\n- **Ik** = I — subject\n- **heb** = have — verb\n- **er** = of them — refers back to the omitted noun\n- **twee** = two — quantity\n\nIn a neutral sentence, the short, unstressed word **er** normally appears early in the middle field, before the number.\n\n### In context\n\n- **Hoeveel boeken heb je? — Ik heb er twee.** = How many books do you have? — I have two.\n- **Ik wil drie appels. — Ik wil er drie.** = I want three apples. — I want three.\n- **Ik koop vijf broodjes. — Ik koop er vijf.** = I'm buying five rolls. — I'm buying five.\n\n💡 Keep the noun when you name it: **Ik heb twee boeken.** Omit the noun and add **er**: **Ik heb er twee.**\n\n### Compare\n\n- **Ik heb twee boeken.** = I have two books.\n- **Ik heb er twee.** = I have two of them."
   }
 ]
