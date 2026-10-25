@@ -90,7 +90,10 @@ async function init() {
   $('#sound-toggle').setAttribute('aria-pressed', state.sound); $('#sound-toggle').querySelector('.sound-label').textContent = state.sound ? 'Sound on' : 'Sound off';
 }
 
-$('#flashcard').addEventListener('click', e => { if (!e.target.closest('#speak-button')) flip(); });
+$('#flashcard').addEventListener('click', e => {
+  if (e.target.closest('#speak-button') || e.target.closest('.answer-scroll')) return;
+  flip();
+});
 $('#flashcard').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
 $('#speak-button').addEventListener('click', e => { e.stopPropagation(); speak(); });
 $('#sound-toggle').addEventListener('click', () => { state.sound = !state.sound; localStorage.setItem('praat-sound', state.sound ? 'on' : 'off'); $('#sound-toggle').setAttribute('aria-pressed', state.sound); $('.sound-label').textContent = state.sound ? 'Sound on' : 'Sound off'; });
