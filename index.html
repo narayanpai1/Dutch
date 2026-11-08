@@ -38,14 +38,14 @@
         <div class="study-grid">
           <aside class="progress-panel" aria-label="Study progress">
             <div>
-              <span class="label">TODAY'S PROGRESS</span>
+              <span class="label">THIS SESSION</span>
               <div class="progress-number"><strong id="progress-number">0</strong><span id="progress-total">/ 1</span></div>
               <div class="progress-track"><span id="progress-bar"></span></div>
-              <p id="progress-message">One phrase at a time.</p>
+              <p id="progress-message">Hard cards return more often.</p>
             </div>
             <div class="streak">
               <span class="streak-icon">✦</span>
-              <div><strong id="known-count">0</strong><span>learned</span></div>
+              <div><strong id="hard-count">0</strong><span>hard cards</span></div>
             </div>
           </aside>
 
@@ -61,16 +61,17 @@
                 <p class="flip-hint">Tap the card to reveal <span>↗</span></p>
               </article>
               <article class="card-face card-back">
-                <div class="card-topline"><span class="category" id="back-category">AT THE SHOP</span><span class="card-index">ANSWER</span></div>
+                <div class="card-topline"><span class="category" id="back-category">AT THE SHOP</span><button class="answer-speak" id="answer-speak-button" aria-label="Hear the Dutch answer">▶ DUTCH</button></div>
                 <div class="answer-scroll" id="answer-content"></div>
                 <p class="flip-hint">Tap to see the phrase <span>↙</span></p>
               </article>
             </div>
             <div class="actions" id="actions" hidden>
-              <button class="action-button again" data-rating="again"><span>↺</span> Again</button>
-              <button class="action-button got-it" data-rating="known"><span>✓</span> Got it</button>
+              <button class="action-button easy" data-rating="easy"><span>☀</span> Easy</button>
+              <button class="action-button medium" data-rating="medium"><span>●</span> Medium</button>
+              <button class="action-button hard" data-rating="hard"><span>↺</span> Hard</button>
             </div>
-            <p class="keyboard-help">Space to flip <span>·</span> 1 again <span>·</span> 2 got it</p>
+            <p class="keyboard-help">Space to flip <span>·</span> 1 easy <span>·</span> 2 medium <span>·</span> 3 hard</p>
           </div>
         </div>
       </section>
@@ -82,9 +83,15 @@
         </div>
         <div class="filter-row">
           <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="learning">Learning</button>
-          <button class="filter" data-filter="known">Learned</button>
+          <button class="filter" data-filter="hard">Hard</button>
+          <button class="filter" data-filter="medium">Medium</button>
+          <button class="filter" data-filter="easy">Easy</button>
+          <button class="filter" data-filter="unrated">New</button>
           <span id="result-count"></span>
+        </div>
+        <div class="data-tools">
+          <p>Your progress stays in this browser.</p>
+          <div><button id="export-progress">Export progress</button><button id="import-progress">Import progress</button><input id="progress-file" type="file" accept="application/json" hidden /></div>
         </div>
         <div class="library-grid" id="library-grid"></div>
         <p class="empty-state" id="empty-state" hidden>No phrases match that search.</p>
